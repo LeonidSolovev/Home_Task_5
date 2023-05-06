@@ -2,20 +2,21 @@
 // [3, 7, 23, 12] -> 19
 // [-4, -6, 89, 6] -> 0
 
-int size = 4;
-int from = 10;
-int to = 100;
+int[] arr = NewArray(4, 1, 100);
+PrintArray(arr);
+Console.WriteLine(FindSumUneven(arr));
 
-int[] arr = new int[size];
+ static int [] NewArray(int size, int from, int to)
+{
+    int[] arr = new int[size];
     Random rnd = new Random();
     for(int i=0; i<size; i++)
       {
   arr[i] = rnd.Next(from, to);
-    Console.WriteLine (arr[i]);
     
      }
-PrintArray(arr);
-Console.WriteLine(FindSumUneven(arr));
+     return arr;
+}
 
 static int FindSumUneven(int [] q)
 {

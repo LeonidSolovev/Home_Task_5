@@ -1,18 +1,7 @@
 ﻿// Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
 // [345, 897, 568, 234] -> 2
 
-int size = 4;
-int from = 100;
-int to = 1000;
-
-int[] arr = new int[size];
-    Random rnd = new Random();
-    for(int i=0; i<size; i++)
-      {
-  arr[i] = rnd.Next(from, to);
-    Console.WriteLine (arr[i]);
-    
-     }
+int[] arr = NewArray (6, 100, 1000);
 PrintArray(arr);
 ShowEven(arr);
 
@@ -25,19 +14,19 @@ static void PrintArray(int[] q)
 }
     Console.Write("] ->");
 }
-// Хотел создать массив методом, но почему-то не работает :( 
-// static int NewArray(int size, int from, int to)
-// {
-//     int[] arr = new int[size];
-//     Random rnd = new Random();
-//     for(int i=0; i<size; i++)
-//       {
-//   arr[i] = rnd.Next(from, to);
-//     Console.WriteLine (arr[i]);
+
+ static int [] NewArray(int size, int from, int to)
+{
+    int[] arr = new int[size];
+    Random rnd = new Random();
+    for(int i=0; i<size; i++)
+      {
+  arr[i] = rnd.Next(from, to);
     
-//      }
-//      return arr;
-// }
+     }
+     return arr;
+}
+
     static int ShowEven (int[] array)
     {
       int c = 0;
