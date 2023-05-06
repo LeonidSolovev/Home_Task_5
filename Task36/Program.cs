@@ -1,0 +1,36 @@
+﻿// Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+// [3, 7, 23, 12] -> 19
+// [-4, -6, 89, 6] -> 0
+
+int size = 4;
+int from = 10;
+int to = 100;
+
+int[] arr = new int[size];
+    Random rnd = new Random();
+    for(int i=0; i<size; i++)
+      {
+  arr[i] = rnd.Next(from, to);
+    Console.WriteLine (arr[i]);
+    
+     }
+PrintArray(arr);
+Console.WriteLine(FindSumUneven(arr));
+
+static int FindSumUneven(int [] q)
+{
+  int sum =0;
+  for (int i = 0; i<q.Length; i+=2)
+    sum += q[i];
+  return sum;
+}
+
+static void PrintArray(int[] q)
+{
+    
+    Console.Write("[ ");
+    for(int i =0; i<q.Length; i++){
+    Console.Write($"{q[i]}, ");
+}
+    Console.Write("] ->");
+}

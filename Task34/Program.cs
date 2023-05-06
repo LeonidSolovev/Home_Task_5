@@ -25,7 +25,7 @@ static void PrintArray(int[] q)
 }
     Console.Write("] ->");
 }
-// Хотел сделать через метод, но он почему-то отказывается работать :() 
+// Хотел создать массив методом, но почему-то не работает :( 
 // static int NewArray(int size, int from, int to)
 // {
 //     int[] arr = new int[size];
